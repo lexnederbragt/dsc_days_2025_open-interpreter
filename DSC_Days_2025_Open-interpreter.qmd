@@ -1,0 +1,112 @@
+---
+title: "Using Open Interpreter as a personal coding and data analysis assistant"
+subtitle: "Lex Nederbragt"
+date: 2025-01-08
+date-format: long
+lang: en
+format:
+  revealjs:
+    theme: serif
+    standalone: true
+  html:
+    output-file: DSC_Days_2025_Open-interpreter-webpage.html
+  gfm: default
+---
+
+::: {.content-visible when-format="revealjs"}
+
+## Lex Nederbragt
+
+
+- Associate Teaching professor, Dept. of Biosciences
+- Topics: Programming, Bioinformatics, Pedagogy
+- Teaching
+  - BIOS1100 – Introduction to computational models for Biosciences
+  - Other bioinformatics courses
+  - MNPED9000 – Teaching in STEM
+
+:::
+
+## Installation instructions
+
+* use Python 3.10 or 3.11, not higher (!)
+
+## Installation instructions
+
+
+It is highly recommended to use an environment for Python:
+
+* conda
+* python virtual environment
+
+## conda installation
+
+```.bash
+conda create --name open-interpreter python=3.11
+conda activate open-interpreter
+pip install open-interpreter[local]
+interpreter --version
+```
+
+**TIP** Make some copies of this environment, this will be useful for later
+
+In another terminal, write
+
+```.bash
+conda create --name open-interpreter2 --clone open-interpreter
+```
+
+## python virtual env installation
+
+```.bash
+python -m venv /path/to/open-interpreter
+source /path/to/open-interpreter
+pip install open-interpreter[local]
+interpreter --version
+```
+
+**TIP** Make some more instances of this environment, this will be useful for later
+
+```.bash
+python -m venv /path/to/open-interpreter2
+```
+
+## What did we install
+
+```.bash
+conda env export --from-history
+```
+
+## Using a local model
+
+```.bash
+interpreter --local
+
+Open Interpreter supports multiple local model providers.
+
+[?] Select a provider:
+   Ollama
+ > Llamafile
+   LM Studio
+   Jan
+
+[?] Select a model:
+ > ↓ Download new model
+```
+
+Choose `Llama-3.1-8B-Instruct`
+
+
+## Exercise 
+
+Get it to write some code
+
+
+
+## etc
+
+You can modify the max_tokens and context_window (in tokens) of locally running models.
+
+For local mode, smaller context windows will use less RAM, so we recommend trying a much shorter window (~1000) if it's failing / if it's slow. Make sure max_tokens is less than context_window.
+
+interpreter --local --max_tokens 1000 --context_window 3000
