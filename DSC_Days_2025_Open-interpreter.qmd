@@ -31,15 +31,18 @@ format:
 
 * use Python 3.10 or 3.11, not higher (!)
 
+::: {.content-visible when-format="revealjs"}
 ## Installation instructions
+:::
 
+It is highly recommended to use an environment for Python.
 
-It is highly recommended to use an environment for Python:
+Choose between
 
 * conda
 * python virtual environment
 
-## conda installation
+## installation using conda
 
 ```.bash
 conda create --name open-interpreter python=3.11
@@ -56,7 +59,7 @@ In another terminal, write
 conda create --name open-interpreter2 --clone open-interpreter
 ```
 
-## python virtual env installation
+## Installation using python virtual env 
 
 ```.bash
 python -m venv /path/to/open-interpreter
@@ -79,9 +82,15 @@ conda env export --from-history
 
 ## Using a local model
 
+Start Open Interpreter with
+
 ```.bash
 interpreter --local
+```
 
+Now select `Llamafile`
+
+```
 Open Interpreter supports multiple local model providers.
 
 [?] Select a provider:
@@ -96,6 +105,17 @@ Open Interpreter supports multiple local model providers.
 
 Choose `Llama-3.1-8B-Instruct`
 
+## Our first program
+
+Ask:
+
+> Write a program that casts a die 1000 times and determines the frequency of sixes
+
+Then ask
+
+> What is the expected frequency?
+
+<!-- 
 
 ## Exercise 
 
@@ -110,3 +130,5 @@ You can modify the max_tokens and context_window (in tokens) of locally running 
 For local mode, smaller context windows will use less RAM, so we recommend trying a much shorter window (~1000) if it's failing / if it's slow. Make sure max_tokens is less than context_window.
 
 interpreter --local --max_tokens 1000 --context_window 3000
+
+ -->
