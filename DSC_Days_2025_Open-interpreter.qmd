@@ -10,8 +10,10 @@ format:
     standalone: true
   html:
     output-file: DSC_Days_2025_Open-interpreter-webpage.html
+    format-links: false
   gfm: default
 ---
+
 
 ::: {.content-visible when-format="revealjs"}
 
@@ -25,6 +27,23 @@ format:
   - Other bioinformatics courses
   - MNPED9000 - Teaching in STEM
 
+:::
+
+## About this workshop
+
+The goals
+
+* Used Open Interpreter for some tasks
+* Be inspired to use it more
+* Be aware of pitfalls and challenges
+
+## Caveats
+
+* Installation may be problematic for some
+
+::: {.incremental}
+* The program may at times be a bit buggy
+* The workshop may run smooth - or not
 :::
 
 ## Installation instructions
@@ -105,7 +124,7 @@ Open Interpreter supports multiple local model providers.
 
 Choose `Llama-3.1-8B-Instruct`
 
-## Our first taska
+## Our first task
 
 Ask:
 
@@ -140,7 +159,7 @@ add this to your `interpreter` command:
 
 ## Another task
 
-> Write a program that casts two dice 1000 times and plots the distribution of the sum of the cast.
+> Write a program that casts two dice 1000 times and plots the distribution of the sum of the casts.
 
 ## Other ways to use a local model
 
@@ -203,6 +222,12 @@ If you can't use such models, you can use my API access to gpt.uio.no
 
 Check the etherpad.
 
+Consider adding these options:
+
+```
+--context_window 160000 --max_tokens 1000 --max_output 10000
+```
+
 ::: {.content-visible when-format="revealjs"}
 ## We need a bigger model
 ::: 
@@ -245,6 +270,11 @@ We will be using
 * https://github.com/datasets/population/blob/main/data/population.csv
 
 
+## Try on your own data
+
+* Use excel files, or csv files, or ...
+* Need a datafile? Try Kaggle: [https://www.kaggle.com/datasets?sort=votes&fileType=csv](https://www.kaggle.com/datasets?sort=votes&fileType=csv)
+
 ## Computer use - Mac users
 
 > Send an email to name@domain.no with subject "Some subject" and body "Body text"
@@ -285,5 +315,19 @@ Save current conversation as a Jupyter notebook.
 
 ## Ethical considerations
 
+::: {.incremental}
+
 * Where does the code come from?
-* 
+* Who pays for this?
+* Environmental footprint?
+
+:::
+
+::: {.content-visible when-format="revealjs"}
+## Evaluation
+
+
+![](Evaluation-QR-464099_qr.png)
+
+### [https://nettskjema.no/a/464099](https://nettskjema.no/a/464099)
+:::

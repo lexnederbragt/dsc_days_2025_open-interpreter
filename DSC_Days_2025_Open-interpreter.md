@@ -2,6 +2,25 @@
 
 January 8, 2025
 
+## About this workshop
+
+The goals
+
+- Used Open Interpreter for some tasks
+- Be inspired to use it more
+- Be aware of pitfalls and challenges
+
+## Caveats
+
+- Installation may be problematic for some
+
+<div class="incremental">
+
+- The program may at times be a bit buggy
+- The workshop may run smooth - or not
+
+</div>
+
 ## Installation instructions
 
 - use Python 3.10 or 3.11, not higher (!)
@@ -90,7 +109,7 @@ Then ask
 ## Settings
 
 From
-https://github.com/openinterpreter/open-interpreter?tab=readme-ov-file#context-window-max-tokens
+https://github.com/OpenInterpreter/open-interpreter/blob/main/README.md#context-window-max-tokens
 
 > For local mode, smaller context windows will use less RAM, so we
 > recommend trying a much shorter window (~1000) if it’s failing / if
@@ -108,7 +127,7 @@ your `interpreter` command:
 ## Another task
 
 > Write a program that casts two dice 1000 times and plots the
-> distribution of the sum of the cast.
+> distribution of the sum of the casts.
 
 ## Other ways to use a local model
 
@@ -163,6 +182,10 @@ If you can’t use such models, you can use my API access to gpt.uio.no
 
 Check the etherpad.
 
+Consider adding these options:
+
+    --context_window 160000 --max_tokens 1000 --max_output 10000
+
 Now repeat the tasks we have done so far.
 
 <!-- 
@@ -200,6 +223,12 @@ We will be using
 
 - https://github.com/datasets/gdp/blob/main/data/gdp.csv
 - https://github.com/datasets/population/blob/main/data/population.csv
+
+## Try on your own data
+
+- Use excel files, or csv files, or …
+- Need a datafile? Try Kaggle:
+  <https://www.kaggle.com/datasets?sort=votes&fileType=csv>
 
 ## Computer use - Mac users
 
@@ -240,3 +269,18 @@ At the end of a session, before closing:
 ```
 
 Save current conversation as a Jupyter notebook.
+
+## Why use Open Interpreter?
+
+- Sensitive data
+- Offline with local models
+
+## Ethical considerations
+
+<div class="incremental">
+
+- Where does the code come from?
+- Who pays for this?
+- Environmental footprint?
+
+</div>
