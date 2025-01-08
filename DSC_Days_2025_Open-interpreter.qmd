@@ -19,13 +19,40 @@ format:
 
 ## Lex Nederbragt
 
-
 - Associate Teaching professor, Dept. of Biosciences
 - Topics: Programming, Bioinformatics, Pedagogy
 - Teaching
   - BIOS1100 - Introduction to computational models for Biosciences
   - Other bioinformatics courses
-  - MNPED9000 - Teaching in STEM
+- Instructor for The Carpentries
+
+
+## Possibilities with LLMs
+
+* Ask for code
+* Run that code
+* Analyze (data)files
+
+::: {.fragment}
+### But
+
+* Subscription
+* Only green data
+* Not with UiO approved tools
+:::
+
+## Why Open Interpreter
+
+* Open source
+* Local models
+* Yellow data
+
+
+## Why Open Interpreter
+
+> Using Open Interpreter is like asking an experienced programmer to develop a program for you
+
+Lex Nederbragt, November 2024
 
 :::
 
@@ -66,7 +93,7 @@ Choose between
 ```.bash
 conda create --name open-interpreter python=3.11
 conda activate open-interpreter
-pip install open-interpreter[local]
+pip install "open-interpreter[local]"
 interpreter --version
 ```
 
@@ -83,7 +110,7 @@ conda create --name open-interpreter2 --clone open-interpreter
 ```.bash
 python -m venv /path/to/open-interpreter
 source /path/to/open-interpreter
-pip install open-interpreter[local]
+pip install "open-interpreter[local]"
 interpreter --version
 ```
 
@@ -270,10 +297,16 @@ We will be using
 * https://github.com/datasets/population/blob/main/data/population.csv
 
 
+## Optional: create a script file
+
+> Write the final program to a script file
+
+
 ## Try on your own data
 
 * Use excel files, or csv files, or ...
 * Need a datafile? Try Kaggle: [https://www.kaggle.com/datasets?sort=votes&fileType=csv](https://www.kaggle.com/datasets?sort=votes&fileType=csv)
+
 
 ## Computer use - Mac users
 

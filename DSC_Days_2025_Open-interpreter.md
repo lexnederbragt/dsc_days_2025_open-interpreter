@@ -37,7 +37,7 @@ Choose between
 ``` .bash
 conda create --name open-interpreter python=3.11
 conda activate open-interpreter
-pip install open-interpreter[local]
+pip install "open-interpreter[local]"
 interpreter --version
 ```
 
@@ -55,7 +55,7 @@ conda create --name open-interpreter2 --clone open-interpreter
 ``` .bash
 python -m venv /path/to/open-interpreter
 source /path/to/open-interpreter
-pip install open-interpreter[local]
+pip install "open-interpreter[local]"
 interpreter --version
 ```
 
@@ -223,6 +223,10 @@ We will be using
 
 - https://github.com/datasets/gdp/blob/main/data/gdp.csv
 - https://github.com/datasets/population/blob/main/data/population.csv
+
+## Optional: create a script file
+
+> Write the final program to a script file
 
 ## Try on your own data
 
